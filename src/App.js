@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import Header from '@components/Header'
+import Landing from '@components/Landing'
+import catalogData from '@constants/catalog.json'
 
 function App() {
+  const catalog={ ...catalogData.data }
+  const [location, setLocation] = useState(null)
+  const [branch, setBranch] = useState(null)
+  console.log(catalog)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header 
+        catalog={catalog} 
+        setLocation={setLocation}
+        setBranch={setBranch}
+        location={location}
+      />
+      <Landing
+        location={location}
+        branch={branch}
+        catalog={catalog}
+      />
     </div>
   );
 }
