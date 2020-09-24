@@ -24,9 +24,6 @@ export default function SubCategory({
                             <img src={images(`./${item.image}`)} alt="Avatar" />
                             <div className="container">
                                 <div><b>{item.name}</b></div>
-                                <span class="material-icons">
-                                    arrow_forward_ios
-                                </span>
                             </div>
                         </div>
                     )
