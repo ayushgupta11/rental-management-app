@@ -16,6 +16,7 @@ function App() {
         setLocation={setLocation}
         setBranch={setBranch}
         location={location}
+        branch={branch}
       />
       <Landing
         location={location}

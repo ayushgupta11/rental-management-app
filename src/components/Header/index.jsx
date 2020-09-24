@@ -5,7 +5,8 @@ export default function Header({
     catalog,
     setLocation,
     setBranch,
-    location
+    location,
+    branch
 }) {
     return (
         <div className="header-section">
@@ -15,6 +16,7 @@ export default function Header({
                 setLocation={setLocation} 
                 setBranch={setBranch}
                 activeLocation={location}
+                activeBranch={branch}
             />
         </div>
     )

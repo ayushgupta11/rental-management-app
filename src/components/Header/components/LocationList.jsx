@@ -4,6 +4,7 @@ import BranchList from './BranchList'
 export default function LocationList({
     locations,
     activeLocation,
+    activeBranch,
     setLocation,
     setBranch
 }) {
@@ -24,7 +25,14 @@ export default function LocationList({
         <div className="dropdown" ref={wrapperRef}>
             <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">
                 <span className="dropbtn-text">
-                    Select Location
+                    <span className="material-icons" style={{ marginRight: '4px' }}>
+                        location_on
+                        </span>
+                        {
+                            activeLocation || activeBranch ?
+                            `${activeLocation} ${activeBranch ? `/ ${activeBranch}` : ''}`
+                            : 'Select Location' 
+                        }
                     <span className="material-icons dropbtn-icon">
                         expand_more
                     </span>
