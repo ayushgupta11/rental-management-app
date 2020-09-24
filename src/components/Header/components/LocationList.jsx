@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import BranchList from './BranchList'
 
 export default function LocationList({
@@ -8,8 +8,20 @@ export default function LocationList({
     setBranch
 }) {
     const [showMenu, setShowMenu] = useState(false)
+    const wrapperRef = useRef(null)
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+    }, [0])
+    const handleClickOutside = (event) => {
+        if (wrapperRef && !wrapperRef.current.contains(event.target)) {
+            setShowMenu(false)
+        }
+    }
     return (
-        <div className="dropdown">
+        <div className="dropdown" ref={wrapperRef}>
             <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">
                 <span className="dropbtn-text">
                     Select Location

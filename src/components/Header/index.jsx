@@ -1,5 +1,5 @@
 import React from 'react'
-import Location from './components/LocationList'
+import LocationList from './components/LocationList'
 
 export default function Header({
     catalog,
@@ -10,7 +10,7 @@ export default function Header({
     return (
         <div className="header-section">
             <div className="header-title" onClick={() => { setLocation(null);setBranch(null) }}>Rental Management System</div>
-            <Location 
+            <LocationList 
                 locations={catalog.locations} 
                 setLocation={setLocation} 
                 setBranch={setBranch}
