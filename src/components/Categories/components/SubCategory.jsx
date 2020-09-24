@@ -21,7 +21,9 @@ export default function SubCategory({
                 currentCategory.subcategories.map((item, index) => {
                     return (
                         <div className="card" key={index}>
-                            <img src={images(`./${item.image}`)} alt="Avatar" />
+                            <div className="card-image">
+                                <img src={images(`./${item.image}`)} alt="Avatar" />
+                            </div>
                             <div className="container">
                                 <div><b>{item.name}</b></div>
                             </div>
