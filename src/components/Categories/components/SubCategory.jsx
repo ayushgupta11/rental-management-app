@@ -23,7 +23,10 @@ export default function SubCategory({
                         <div className="card" key={index}>
                             <img src={images(`./${item.image}`)} alt="Avatar" />
                             <div className="container">
-                                <h4><b>{item.name}</b></h4>
+                                <div><b>{item.name}</b></div>
+                                <span class="material-icons">
+                                    arrow_forward_ios
+                                </span>
                             </div>
                         </div>
                     )

@@ -34,7 +34,12 @@ export default function Categories({
     }, [location, branch])
     return (
         <div className="categories-container">
-            <Pagination selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+            <Pagination 
+                selectedCategory={selectedCategory} 
+                setSelectedCategory={setSelectedCategory}
+                location={location}
+                branch={branch}
+            />
             {
                 selectedCategory ?
                     <SubCategory selectedCategory={selectedCategory} categories={categoryList} />

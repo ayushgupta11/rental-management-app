@@ -22,6 +22,7 @@ function App() {
         branch={branch}
         catalog={catalog}
       />
+      <div className="footer"></div>
     </div>
   );
 }

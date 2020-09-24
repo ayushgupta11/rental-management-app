@@ -9,7 +9,7 @@ export default function Header({
 }) {
     return (
         <div className="header-section">
-            <div className="header-title">Rental Management System</div>
+            <div className="header-title" onClick={() => { setLocation(null);setBranch(null) }}>Rental Management System</div>
             <Location 
                 locations={catalog.locations} 
                 setLocation={setLocation} 

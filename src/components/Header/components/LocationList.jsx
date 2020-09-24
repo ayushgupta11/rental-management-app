@@ -10,7 +10,14 @@ export default function LocationList({
     const [showMenu, setShowMenu] = useState(false)
     return (
         <div className="dropdown">
-            <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">Select Location</button>
+            <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">
+                <span className="dropbtn-text">
+                    Select Location
+                    <span class="material-icons dropbtn-icon">
+                        expand_more
+                    </span>
+                </span>
+            </button>
             <div className={`dropdown-content ${showMenu ? 'show' : ''}`}>
                 {
                     locations.map((location) => {
