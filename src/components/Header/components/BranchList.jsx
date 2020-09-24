@@ -28,7 +28,7 @@ export default function BranchList({
     }
     return (
         <span className="dropdown" onClick={() => handleLocationClick(location.dealers_id)}>
-            <span>{location.name}</span>
+            <span>{location.name.toLowerCase() }</span>
             <div className={`branch-dropdown dropdown-content ${showMenu ? 'show' : ''}`}>
                 {
                     location.branches.map((branch) => {

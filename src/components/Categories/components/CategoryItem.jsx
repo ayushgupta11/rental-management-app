@@ -16,10 +16,12 @@ export default function CategoryItem({
     }
     return (
         <div className="card">
-            <img src={images(`./${category.image}`)} alt="Avatar" />
+            <div className="card-image">
+                <img src={images(`./${category.image}`)} alt="Avatar" />
+            </div>
             <div className="container" onClick={() => setSelectedCategory(category.name)}>
                 <div><b>{category.name}</b></div>
-                <span class="material-icons">
+                <span className="material-icons">
                     arrow_forward_ios
                 </span>
             </div>

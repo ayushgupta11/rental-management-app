@@ -25,7 +25,7 @@ export default function LocationList({
             <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">
                 <span className="dropbtn-text">
                     Select Location
-                    <span class="material-icons dropbtn-icon">
+                    <span className="material-icons dropbtn-icon">
                         expand_more
                     </span>
                 </span>

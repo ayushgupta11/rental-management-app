@@ -9,10 +9,9 @@ export default function Pagination({
     return (
         <div className="pagination-container">
             <div className="pagination">
-                <span onClick={() => setSelectedCategory(null)}>Equipment Catalog</span> {selectedCategory ? <>/  <span>{selectedCategory}</span></> : ''}
+                <span className="page-item" onClick={() => setSelectedCategory(null)}>Equipment Catalog</span> {selectedCategory ? <>/  <span className="page-item">{selectedCategory}</span></> : ''}
             </div>
             <div className="filters">
-                <span className="title item">Filters</span>
             {
                 location ?
                     <span className="item">

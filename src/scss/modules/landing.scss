@@ -24,9 +24,13 @@
         margin-bottom: 40px;
         .pagination-container{
             padding: 10px;
+            font-size: 15px;
             .pagination{
-                font-weight: bold;
-                font-size: 16px;
+                font-size: 15px;
+                .page-item{
+                    margin:  0 10px;
+                    color: #7373ff;
+                }
                 span{
                     cursor: pointer;
                     &:hover{
@@ -37,10 +41,10 @@
             .filters{
                 margin-top: 10px;
                 .title{
-                    font-weight: bold;
+                    color: #7373ff;
                 }
                 .item{
-                    margin-left: 10px;
+                    margin: 15px 15px;
                 }
             }
         }
@@ -54,8 +58,11 @@
                 border: 1px solid #eee;
                 border-radius: 5px;
                 width: 235px;
-                img{
-                    width: 100%;
+                .card-image{
+                    padding: 30px;
+                    img{
+                        width: 100%;
+                    }
                 }
               }
               .card:hover {
@@ -67,10 +74,11 @@
                 background: #135ce3;
                 cursor: pointer;
                 display: flex;
-                height: 50px;
+                height: 35px;
                 /* align-items: center; */
                 justify-content: space-between;
                 align-items: center;
+                font-size: 12px;
               }
         }
     }
