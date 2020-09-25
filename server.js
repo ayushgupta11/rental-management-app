@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const morgan = require('morgan')
+const PORT = process.env.PORT || 8080
 
 const app = express()
 app.use(bodyParser.json())
@@ -23,6 +24,6 @@ app.get('**/', (req, res) => {
     res.sendFile(path.join(__dirname,'/build/index.html'))
 })
 
-app.listen(8080,'0.0.0.0',() => {
-    console.log('listening on *:8080');
+app.listen(PORT,'0.0.0.0',() => {
+    console.log('listening on port', port);
 })
