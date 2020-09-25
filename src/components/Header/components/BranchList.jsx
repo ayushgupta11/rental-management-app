@@ -10,20 +10,20 @@ export default function BranchList({
     const [showMenu, setShowMenu] = useState(false)
     useEffect(() => {
         if(activeLocation){
-            if(activeLocation !== location.dealers_id){
+            if(activeLocation.value !== location.dealers_id){
                 setShowMenu(false)
             }
         }
     }, [activeLocation])
     const handleLocationClick = (id) => {
-        setLocation(id)
+        setLocation({value: id, label: location.name })
         setBranch(null)
         setShowMenu(!showMenu)
     }
-    const handleBranchClick = (event, id) => {
+    const handleBranchClick = (event, id, name) => {
         event.stopPropagation()
-        setLocation(location.dealers_id)
-        setBranch(id)
+        setLocation({value: location.dealers_id, label: location.name })
+        setBranch({value: id, label: name })
         closeMenu()
     }
     return (
@@ -33,7 +33,7 @@ export default function BranchList({
                 {
                     location.branches.map((branch) => {
                         return (
-                            <span key={branch.branch_id} onClick={(event) => handleBranchClick(event, branch.branch_id)}>{branch.name}</span>
+                            <span key={branch.branch_id} onClick={(event) => handleBranchClick(event, branch.branch_id, branch.name)}>{branch.name}</span>
                         )
                     })
                 }

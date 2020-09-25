@@ -12,9 +12,9 @@ export default function Categories({
     const [selectedCategory, setSelectedCategory] = useState(null)
     const fetchCategories = () => {
         if (location) {
-            let currLoc = catalog.locations.filter((item) => item.dealers_id === location)[0]
+            let currLoc = catalog.locations.filter((item) => item.dealers_id === location.value)[0]
             if (branch) {
-                let currBranch = currLoc.branches.filter((item) => item.branch_id === branch)[0]
+                let currBranch = currLoc.branches.filter((item) => item.branch_id === branch.value)[0]
                 setCategoryList(currBranch.categories || [])
             }
             else {

@@ -15,14 +15,14 @@ export default function Pagination({
             {
                 location ?
                     <span className="item">
-                        <span className="title">Location</span>: {location}
+                        <span className="title">Location</span>: {location.label}
                     </span>
                     : null
             }
             {
                 branch ?
                     <span className="item">
-                        <span className="title">Branch</span>: {branch}
+                        <span className="title">Branch</span>: {branch.label}
                     </span>
                     : null
             }

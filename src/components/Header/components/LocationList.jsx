@@ -30,7 +30,7 @@ export default function LocationList({
                         </span>
                         {
                             activeLocation || activeBranch ?
-                            `${activeLocation} ${activeBranch ? `/ ${activeBranch}` : ''}`
+                            `${activeLocation.label} ${activeBranch ? `/ ${activeBranch.label}` : ''}`
                             : 'Select Location' 
                         }
                     <span className="material-icons dropbtn-icon">
